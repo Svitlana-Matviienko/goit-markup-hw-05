@@ -16,6 +16,7 @@ html {
     --footer-bgcolor: #2F303A;
     --light-color: #757575;
     --team-color: #F4F4FD;
+    --pressed-state: #404BBF;
 }
 
 .body {
@@ -111,9 +112,30 @@ padding-top: 24px;
 padding-bottom: 24px;
 }
 
+.current {
+
+    position: relative;
+}
+
+.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--pressed-state);
+    position: absolute;
+    left: 0;
+    bottom: -3.5px;
+    border-radius: 2px;
+}
+
+.site-nav .current {
+    color: var(--pressed-state);
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus {
-color: var(--button-color);
+color: var(--pressed-state);
 }
 
 .contacts {
@@ -182,7 +204,7 @@ letter-spacing: 0.02em;
 
 .main-button:hover,
 .main-button:focus {
-    background-color: #404BBF;
+    background-color: var(--pressed-state);
 }
 
 /* About */
@@ -308,7 +330,7 @@ margin-bottom: 72px;
 
 .item-social:hover,
 .item-social:focus {
-    background-color: #404BBF;
+    background-color: var(--pressed-state);
 }
 
 .team-item {
@@ -364,13 +386,13 @@ padding-bottom: 120px;
 
 .partnes:hover,
 .partnes:focus {
-   border-color: #404BBF;
-   color: #404BBF;
+   border-color: var(--pressed-state);
+   color: var(--pressed-state);
 }
 
  .logo-customers:hover,
  .logo-customers:focus {
-    fill: #404BBF;
+    fill: var(--pressed-state);
 }
 
 .logo-customers {
